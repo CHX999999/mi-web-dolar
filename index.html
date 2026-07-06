@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Dólar Elite | Terminal Profesional</title>
+</head>
+<body>
+    <div id="loading-overlay" class="loading-overlay" aria-hidden="true">
+        <div class="loading-spinner"></div>
+        <span class="loading-text">Obteniendo cotizaciones...</span>
+    </div>
+    <div id="error-banner" class="error-banner" role="alert" aria-live="assertive" hidden>
+        <span id="error-message">No se pudieron obtener las cotizaciones. Reintentando...</span>
+        <button id="error-dismiss" type="button" aria-label="Cerrar alerta">&times;</button>
+    </div>
+    <header class="header">
+        <button id="theme-toggle" type="button">Cambiar Modo</button>
+        <h1 class="main-title">DÓLAR <span class="highlight">ELITE</span></h1>
+        <div class="update-pill" id="last-update">Conectando...</div>
+        <div class="converter-box">
+            <input
+                type="text"
+                id="monto-usuario"
+                inputmode="decimal"
+                autocomplete="off"
+                placeholder="INGRESAR MONTO (ARS)"
+                aria-label="Monto en pesos argentinos"
+            >
+        </div>
+    </header>
+    <main class="main-container"></main>
+    <script src="script.js"></script>
+</body>
+</html>
